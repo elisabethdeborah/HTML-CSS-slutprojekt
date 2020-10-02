@@ -4,26 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Startsida</title>
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
     <link href="CSS/style.css" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <nav class="navbar-container">
-            <!--Logga-delen-->
+         <!--Logga- och navicon-delen-->
+        <aside class="logo-navicon">
             <a href="index.html" class="logo-link">
-                <img src="./IMG/logo.svg" alt="logga" class="logo">
+                <img src="./IMG/logga-vit.svg" alt="logga" class="logo">
             </a>
+            <svg class="navicon" width="57" height="43" viewBox="0 0 57 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect class="navicon__linje-1" width="56.087" height="6.85507" rx="3" fill="white"/>
+                <rect class="navicon__linje-2" y="18.0723" width="56.087" height="6.85507" rx="3" fill="white"/>
+                <rect class="navicon__linje-3" y="36.1445" width="56.087" height="6.85507" rx="3" fill="white"/>
+            </svg>
+        </aside>
+        <nav class="navbar-container">
             <!-- navlänksdelen -->
             <ul class="navbar-container__link-list-container">
-                <li class="navbar-container__link-list-container__nav-list-item"><a href="index.html" class="nav-link">Start</a></li>
+                <li class="navbar-container__link-list-container__nav-list-item"><!-- <a href="index.html" class="nav-link"> -->Start<!-- </a> --></li>
                 <li class="navbar-container__link-list-container__nav-list-item"><a href="muaythai.html" class="nav-link">Muay Thai</a></li>
                 <li class="navbar-container__link-list-container__nav-list-item"><a href="bjj.html" class="nav-link">BJJ</a></li>
                 <li class="navbar-container__link-list-container__nav-list-item"><a href="kravmaga.html" class="nav-link">Krav Maga</a></li>
             </ul>
             <!--Knapparna för att byta färgtema på sidan-->
-            <aside class="navbar-container__color-scheme-dark-button"></aside>
-            <aside class="navbar-container__color-scheme-colorful-button"></aside>
-            <aside class="navbar-container__color-scheme-light-button"></aside>
+            <aside class="navbar-container__color-schemes">
+                <article class="navbar-container__color-schemes--dark-button"></article>
+                <article class="navbar-container__color-schemes--colorful-button"></article>
+                <article class="navbar-container__color-schemes--light-button"></article>
+            </aside>
         </nav>
         <section class="hero">
             <article class="hero__text">
@@ -31,7 +41,7 @@
                 <p class="hero__text__ingress">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, dolorum.</p>
                 <a href="#" class="hero__text__knapp">Gå vidare<img src="IMG/pil-ikon vit svart bakgrund.svg" alt="pil-ikon" class="knapp-ikon"></a>
             </article>
-            <aside class="hero__bild-container"></aside>
+            <aside class="hero__bild"></aside>
         </section>
     </header>
     <main>
@@ -90,5 +100,6 @@
             </article>
         </section>
     </footer>
+    <script src="/HTML-CSS-slutprojekt/script.js"></script>
 </body>
 </html>
