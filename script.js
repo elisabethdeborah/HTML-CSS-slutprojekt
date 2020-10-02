@@ -1,3 +1,7 @@
+
+const theme = document.querySelectorAll('.navbar-container__color-schemes--color-scheme');
+
+
 //toggle menu
 document.querySelector('.navicon')
 .addEventListener('click', function(params){
@@ -12,10 +16,11 @@ document.querySelectorAll('ul > li')
     })
 })
 
-const theme = document.querySelectorAll('.navbar-container__color-schemes--color-scheme');
-console.log(theme)
+
+//byt färgtema på sidan
 theme.forEach(button => {
     button.addEventListener('click', (e)=>{
          document.querySelector('body').className=button.classList[1];
+         document.querySelector('header').classList.toggle('open');
     })
 })
