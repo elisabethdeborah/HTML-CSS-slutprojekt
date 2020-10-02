@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Startsida</title>
+    <title>BJJ</title>
     <link href="CSS/style.css" rel="stylesheet">
 </head>
 <body>
@@ -17,7 +17,7 @@
             <ul class="navbar-container__link-list-container">
                 <li class="navbar-container__link-list-container__nav-list-item"><a href="index.html" class="nav-link">Start</a></li>
                 <li class="navbar-container__link-list-container__nav-list-item"><a href="muaythai.html" class="nav-link">Muay Thai</a></li>
-                <li class="navbar-container__link-list-container__nav-list-item"><a href="bjj.html" class="nav-link">BJJ</a></li>
+                <li class="navbar-container__link-list-container__nav-list-item navbar-container__link-list-container__nav-list-item--active"><a href="bjj.html" class="nav-link--active">BJJ</a></li>
                 <li class="navbar-container__link-list-container__nav-list-item"><a href="kravmaga.html" class="nav-link">Krav Maga</a></li>
             </ul>
             <!--Knapparna för att byta färgtema på sidan-->
@@ -26,40 +26,27 @@
             <aside class="navbar-container__color-scheme-light-button"></aside>
         </nav>
         <section class="hero">
-            <article class="hero__text">
-                <h1 class="hero__text__h1">kampsport</h1>
-                <p class="hero__text__ingress">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, dolorum.</p>
-                <a href="#" class="hero__text__knapp">Gå vidare<img src="IMG/pil-ikon vit svart bakgrund.svg" alt="pil-ikon" class="knapp-ikon"></a>
-            </article>
-            <aside class="hero__bild-container"></aside>
+            <!--Behåller article-delen av classnamnet för att använda samma CSS på alla sidor-->
+            <h1 class="hero__text__h1">BJJ</h1>
         </section>
     </header>
     <main>
         <section class="infogrid-container">
-            <!--Bild-ruta-->
-            <article class="infogrid-container__item1"></article> 
-            <!--Text-ruta-->
+            <article class="infogrid-container__item1"></article>
             <article class="infogrid-container__item2">
-                <h2 class="infogrid-container__item__rubrik">Muay Thai</h2>
+                <h2 class="infogrid-container__item__rubrik">Vad är BJJ?</h2>
                 <p class="infogrid-container__item__p">Lorem ipsum dolor sit amet consectetur.</p>
-                <a href="#" class="infogrid-container__item__knapp"><img src="IMG/pil-ikon vit svart bakgrund.svg"></a>
             </article>
-            <!--Text-ruta-->
             <article class="infogrid-container__item3">
-                <h2 class="infogrid-container__item__rubrik">BJJ</h2>
+                <h2 class="infogrid-container__item__rubrik">Hur uppstod BJJ?</h2>
                 <p class="infogrid-container__item__p">Lorem ipsum dolor sit amet consectetur.</p>
-                <a href="#" class="infogrid-container__item__knapp"><img src="IMG/pil-ikon vit svart bakgrund.svg"></a>
             </article>
-            <!--Bild-ruta-->
             <article class="infogrid-container__item4"></article>
-            <!--Text-ruta-->
             <article class="infogrid-container__item5">
-                <h2 class="infogrid-container__item__rubrik">Krav Maga</h2>
+                <h2 class="infogrid-container__item__rubrik">Hur tränar man BJJ?</h2>
                 <p class="infogrid-container__item__p">Lorem ipsum dolor sit amet consectetur.</p>
-                <a href="#" class="infogrid-container__item__knapp"><img src="IMG/pil-ikon vit svart bakgrund.svg"></a>
             </article>
-            <!--Bild-ruta-->
-            <article class="infogrid-container__item6"></article> 
+            <article class="infogrid-container__item6"></article>
         </section>
     </main>
     <footer class="footer">
