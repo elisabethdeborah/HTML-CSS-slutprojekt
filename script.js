@@ -11,3 +11,11 @@ document.querySelectorAll('ul > li')
         document.querySelector('header').classList.toggle('open');
     })
 })
+
+const theme = document.querySelectorAll('.navbar-container__color-schemes--color-scheme');
+console.log(theme)
+theme.forEach(button => {
+    button.addEventListener('click', (e)=>{
+         document.querySelector('body').className=button.classList[1];
+    })
+})

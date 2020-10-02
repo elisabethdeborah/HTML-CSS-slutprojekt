@@ -17,12 +17,16 @@ body {
 }
 
 
-body.dark {
+body.dark-theme {
     background-color: var(--light-blue);
 }
 
-body.orange {
+body.colorful-theme {
     background-color: var(--light-orange);
+}
+
+body.light-theme {
+    background-color: var(--light-gray);
 }
 
 .header {
@@ -119,14 +123,14 @@ nav aside.navbar-container__color-schemes {
     margin: 0 .5rem;
 }
 
-.navbar-container__color-schemes--dark-button {
+aside.navbar-container__color-schemes> article.dark-theme {
     background: var(--dark-blue);
 }
 
-.navbar-container__color-schemes--colorful-button {
+aside.navbar-container__color-schemes> article.colorful-theme{
     background: var(--light-orange);
 }
 
-.navbar-container__color-schemes--light-button {
+aside.navbar-container__color-schemes> article.light-theme {
     background: var(--light-gray);
 }
