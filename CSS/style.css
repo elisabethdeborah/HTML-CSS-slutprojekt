@@ -14,9 +14,37 @@ body {
     box-sizing: border-box;
     font-family: 'Days One', sans-serif;
     scroll-behavior: smooth;
+    color: var(--dark-gray);
 }
 
+h1 {
+    font-size: 3em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    max-width: 70%;
+    line-height: 3rem;
+    scroll-padding-block-end: 0;
+    display: inline-block;
+    text-align: center;
+    overflow-x: hidden;
 
+}
+
+h2 {
+    font-size: 2em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    max-width: 70%;
+    line-height: 3rem;
+    scroll-padding-block-end: 0;
+    display: inline-block;
+}
+
+svg{
+    overflow: visible;
+}
+
+/* FÄRGTEMAN */
 body.dark-theme {
     background-color: var(--light-blue);
 }
@@ -26,39 +54,18 @@ body.colorful-theme {
 }
 
 body.light-theme {
-    background-color: var(--light-gray);
+    background-color: white;
 }
+/**/
 
-.header {
+header {
     width: 100%;
     background: var(--light-gray);
 }
 
-nav.navbar-container {
-    position: fixed;
-    margin: 0;
-    padding: 0;
-    top: 0;
-    left: -100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    background: var(--dark-gray-transparent);
-    transition: transform 0.5s ease-in;
-    z-index: 1;
-}
 
-svg{
-    overflow: visible;
-}
-
-header.open nav.navbar-container {
-    transform: translateX(100vw);
-}
- aside.logo-navicon {
+/* NAVBAR */
+header aside.logo-navicon {
     display: flex;
     flex-direction: row;
     width: 100vw;
@@ -68,11 +75,11 @@ header.open nav.navbar-container {
     z-index: 9999;
 }
 
-aside.logo-navicon a.logo-link {
+header aside.logo-navicon a.logo-link {
     transform: scale(0.8);
 }
 
-svg.navicon rect {
+header aside.logo-navicon svg.navicon rect {
     transition: all 2s ease;
     transform-origin: center;
 }
@@ -91,7 +98,28 @@ header.open svg.navicon .navicon__linje-3 {
     transform: translate(-15px, -15px) rotate(-45deg);
 }
 
-nav ul.navbar-container__link-list-container {
+header nav.navbar-container {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: -100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: var(--dark-gray-transparent);
+    transition: transform 0.5s ease-in;
+    z-index: 1;
+}
+
+header.open nav.navbar-container {
+    transform: translateX(100vw);
+}
+
+.navbar-container ul.navbar-container__link-list-container {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -101,21 +129,21 @@ nav ul.navbar-container__link-list-container {
     align-items: center;
     justify-content: space-evenly;
 }
-nav ul.navbar-container__link-list-container .nav-link {
+.navbar-container ul.navbar-container__link-list-container .nav-link {
     color: white;
     text-decoration: none;
     font-size: 2rem;
     letter-spacing: 0.2rem;
 } 
 
-nav aside.navbar-container__color-schemes {
+.navbar-container aside.navbar-container__color-schemes {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 5rem auto;
 }
 
-.navbar-container__color-schemes > article {
+.navbar-container aside.navbar-container__color-schemes > article {
     height: 3rem;
     width: 3rem;
     border-radius: 100%;
@@ -123,14 +151,237 @@ nav aside.navbar-container__color-schemes {
     margin: 0 .5rem;
 }
 
-aside.navbar-container__color-schemes> article.dark-theme {
+.navbar-container aside.navbar-container__color-schemes> article.dark-theme {
     background: var(--dark-blue);
 }
 
-aside.navbar-container__color-schemes> article.colorful-theme{
+.navbar-container aside.navbar-container__color-schemes> article.colorful-theme{
     background: var(--light-orange);
 }
 
-aside.navbar-container__color-schemes> article.light-theme {
+.navbar-container aside.navbar-container__color-schemes> article.light-theme {
     background: var(--light-gray);
+}
+/* SLUT PÅ NAVBAR */
+
+
+/* HERO */ 
+ .hero {
+    height: 100vh;
+    background: rgba(58, 58, 58, .5) url(/HTML-CSS-slutprojekt/IMG/footerbakgrund2.jpg);
+    background-repeat: no-repeat;
+   background-position: 50% 50%;
+   background-size: cover;
+   color: rgb(34, 34, 34);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   }
+   .hero__text {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+   }
+
+   .hero__text__ingress {
+       padding: 0 10vw;
+       text-align: center;
+        line-height: 2.3rem;
+        font-size: 1.6rem;
+        }
+
+
+
+/* MAIN */
+
+main {
+    width: 100vw;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+.infogrid-container {
+    margin: 20px auto;
+    display: grid;
+    grid-template-areas: 
+    "ruta-1-bild"
+    "ruta-2-text"
+    "ruta-4-bild"
+    "ruta-3-text"
+    "ruta-6-bild"
+    "ruta-5-text"
+    ;
+    width: 100%;
+    max-width: 800px;
+    gap: 10px;
+}
+
+.infogrid-container > article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infogrid-container > article.bild {
+    background-repeat: no-repeat;
+    height: 525px;
+    width: auto;
+    filter: grayscale(100);
+}
+
+.infogrid-container > article.text {
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    padding: 2rem 0;
+    box-shadow: 0px 3px 3px rgba(58, 58, 58, .5);
+}
+
+.infogrid-container > article.text p {
+    width: 80%;
+}
+
+
+.infogrid-container__muaythai-bild {
+    grid-area: ruta-1-bild;
+    background-image: url(/HTML-CSS-slutprojekt/IMG/muaythai.jpg);
+    background-position: 67% 20%;
+    background-size: cover;
+    
+}
+
+.infogrid-container__muaythai{
+    grid-area: ruta-2-text;
+}
+
+.infogrid-container__bjj {
+    grid-area: ruta-3-text;
+}
+
+.infogrid-container__bjj-bild {
+    grid-area: ruta-4-bild;
+    background-image: url(/HTML-CSS-slutprojekt/IMG/bjj.jpg);
+    background-size: contain;
+    background-position: 42% 30%;
+    background-size: cover;
+}
+
+.infogrid-container__kravmaga {
+    grid-area: ruta-5-text;
+}
+
+.infogrid-container__kravmaga-bild {
+    grid-area: ruta-6-bild;
+    background-image: url(/HTML-CSS-slutprojekt/IMG/kravmaga.jpg);
+    background-position: 65% 10%;
+    background-size: contain;
+}
+
+.infogrid-container__item__knapp, .hero__text__knapp {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 35px;
+    letter-spacing: .1rem;
+    border: 2px solid white;
+    box-shadow: 0 1px 5px rgba(58, 58, 58, .5);
+}
+
+.knapp__muaythai {
+    background-color: var(--accent-green);
+}
+.knapp__bjj {
+    background-color: var(--light-orange);
+}
+.knapp__kravmaga {
+    background-color: var(--dark-blue);
+}
+
+.muaythai-rubrik {
+    color: var(--accent-green);
+    max-width: 80%;
+}
+
+.bjj-rubrik {
+    color: var(--light-orange);
+    max-width: 80%;
+}
+
+.kravmaga-rubrik {
+    color: var(--dark-blue);
+    max-width: 80%;
+}
+
+/* MAIN SLUT */
+
+
+
+/* FOOTER */
+ .footer {
+     width: 100vw;
+    background: rgba(58, 58, 58, .5) url(/HTML-CSS-slutprojekt/IMG/footerbakgrund2.jpg);
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+    background-size: cover;
+    color: rgb(34, 34, 34);
+    }
+
+ .footer__grid-container {
+     display: grid;
+     grid-template-columns: repeat(1, 1fr);
+    /*  overflow-X: hidden; */
+ }
+
+
+.footer__grid-container__item {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 0;
+    line-height: 2rem;
+    font-size: 1.3rem;
+}
+
+.footer__grid-container__item a {
+    text-decoration: none;
+    color: var(--accent-green);
+    font-size: 1.7rem;
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 600px) {
+
+    .hero {
+        background: rgba(58, 58, 58, .5) url(/HTML-CSS-slutprojekt/IMG/punching-bag.jpg);
+    }
+    .hero__text {
+        flex: 1;
+    }
+    .hero__bild {
+        flex: 1;
+    } 
+
+.infogrid-container {
+    width: 500px;
+    grid-template-areas: 
+    "ruta-1-bild ruta-2-text"
+    "ruta-3-text ruta-4-bild"
+    "ruta-5-text ruta-6-bild";
+    gap: 20px;
+    }
+
+    .hero__text__knapp, .infogrid-container__item__knapp {
+        content: url(/HTML-CSS-slutprojekt/IMG/pil-ikon\ vit\ svart\ bakgrund.svg);
+    } 
 }
