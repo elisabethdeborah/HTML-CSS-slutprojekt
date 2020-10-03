@@ -7,6 +7,8 @@
     --dark-gray-transparent: rgba(58, 58, 58, 0.95);
     --light-gray: #898989;
     --accent-green: #0E383A;
+    --white-textoutline: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
+    --black-textoutline: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 body {
@@ -15,28 +17,26 @@ body {
     font-family: 'Days One', sans-serif;
     scroll-behavior: smooth;
     color: var(--dark-gray);
+    background-color: rgb(216, 213, 213);
+
 }
 
 h1 {
-    font-size: 3em;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    max-width: 70%;
-    line-height: 3rem;
-    scroll-padding-block-end: 0;
+    font-size: 5em;
+    max-width: 80%;
+    line-height: 6rem;
     display: inline-block;
     text-align: center;
-    overflow-x: hidden;
+    text-shadow: var(--white-textoutline);
+    word-wrap: break-word;
+    margin: 0 auto;
 
 }
 
 h2 {
     font-size: 2em;
-    margin-block-start: 0;
-    margin-block-end: 0;
     max-width: 70%;
     line-height: 3rem;
-    scroll-padding-block-end: 0;
     display: inline-block;
 }
 
@@ -54,7 +54,7 @@ body.colorful-theme {
 }
 
 body.light-theme {
-    background-color: white;
+    background-color: rgb(216, 213, 213);
 }
 /**/
 
@@ -168,15 +168,41 @@ header.open nav.navbar-container {
 /* HERO */ 
  .hero {
     height: 100vh;
-    background: rgba(58, 58, 58, .5) url(/HTML-CSS-slutprojekt/IMG/footerbakgrund2.jpg);
-    background-repeat: no-repeat;
-   background-position: 50% 50%;
-   background-size: cover;
+   background-repeat: no-repeat;
    color: rgb(34, 34, 34);
    display: flex;
    flex-direction: column;
    justify-content: center;
    }
+
+
+
+   .hero-start {
+    background: rgba(58, 58, 58, .5) url(/HTML-CSS-slutprojekt/IMG/footerbakgrund2.jpg);
+    }
+
+   .hero-muaythai {
+    background-image: url(/HTML-CSS-slutprojekt/IMG/muaythai.jpg);
+    background-position: 67% 20%;
+   }
+
+   .hero-bjj {
+    background-image: url(/HTML-CSS-slutprojekt/IMG/bjj.jpg);
+    background-position: 42% 30%;
+   }
+
+   .hero-kravmaga {
+    background-image: url(/HTML-CSS-slutprojekt/IMG/kravmaga-eyepoke.jpg);
+    background-position: 65% 10%;
+   }
+
+   .hero > svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}
+
    .hero__text {
        display: flex;
        flex-direction: column;
@@ -214,44 +240,17 @@ main {
     "ruta-5-text"
     ;
     width: 100%;
-    max-width: 800px;
     gap: 10px;
 }
-
-.infogrid-container > article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.infogrid-container > article.bild {
-    background-repeat: no-repeat;
-    height: 525px;
-    width: auto;
-    filter: grayscale(100);
-}
-
-.infogrid-container > article.text {
-    width: 100vw;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 2rem;
-    font-size: 1.3rem;
-    padding: 2rem 0;
-    box-shadow: 0px 3px 3px rgba(58, 58, 58, .5);
-}
-
-.infogrid-container > article.text p {
-    width: 80%;
-}
-
+.hero, .infogrid-container__muaythai-bild, .infogrid-container__bjj-bild, .infogrid-container__kravmaga-bild, .infogrid-container__item1,
+ .infogrid-container__item4,.infogrid-container__item6, .footer{
+     background-size: cover;
+ } 
 
 .infogrid-container__muaythai-bild {
     grid-area: ruta-1-bild;
     background-image: url(/HTML-CSS-slutprojekt/IMG/muaythai.jpg);
     background-position: 67% 20%;
-    background-size: cover;
-    
 }
 
 .infogrid-container__muaythai{
@@ -265,9 +264,7 @@ main {
 .infogrid-container__bjj-bild {
     grid-area: ruta-4-bild;
     background-image: url(/HTML-CSS-slutprojekt/IMG/bjj.jpg);
-    background-size: contain;
     background-position: 42% 30%;
-    background-size: cover;
 }
 
 .infogrid-container__kravmaga {
@@ -276,9 +273,86 @@ main {
 
 .infogrid-container__kravmaga-bild {
     grid-area: ruta-6-bild;
-    background-image: url(/HTML-CSS-slutprojekt/IMG/kravmaga.jpg);
+    background-image: url(/HTML-CSS-slutprojekt/IMG/kravmaga-eyepoke.jpg);
     background-position: 65% 10%;
-    background-size: contain;
+}
+
+.infogrid-container > article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ article.bild, .muaythai-bild1, .muaythai-bild2, .muaythai-bild3, .bjj-bild1, .bjj-bild2, .bjj-bild3, .krav-bild1, .krav-bild2, .krav-bild3 {
+    background-repeat: no-repeat;
+    height: 525px;
+    width: auto;
+    filter: grayscale(100);
+}
+
+.infogrid-container > article.text {
+    width: 100vw;
+    margin: 0;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infogrid-container > article.text p {
+    width: 80%;
+}
+.infogrid-container__item1 {
+    grid-area: ruta-1-bild;
+}
+.infogrid-container__item4 {
+    grid-area: ruta-4-bild;
+}
+.infogrid-container__item6 {
+    grid-area: ruta-6-bild;
+}
+
+.muaythai-bild1 {
+    background-image: url(/HTML-CSS-slutprojekt/IMG/kick-training.jpg);
+    background-position: 60% 50%;
+}
+.muaythai-bild2 {
+    background-image: url(/HTML-CSS-slutprojekt/IMG/muaythai-fight.jpg);
+}
+.muaythai-bild3 {
+    background-image: url(/HTML-CSS-slutprojekt/IMG/thai-training.jpg);
+    background-position: 35% 50%;
+}
+
+.bjj-bild1 {
+    background-image: url(/HTML-CSS-slutprojekt/IMG/bjj-boys.jpg);
+}
+.bjj-bild2 {
+    background-image: url(/HTML-CSS-slutprojekt/IMG/bjj-standing2.jpg);
+}
+.bjj-bild3 {
+    background-image: url(/HTML-CSS-slutprojekt/IMG/bjj-train.jpg);
+}
+
+.krav-bild1 {
+    background-image: url(/HTML-CSS-slutprojekt/IMG/kravmaga-choke.jpg);  
+}
+.krav-bild2 {
+    background-image: url(/HTML-CSS-slutprojekt/IMG/kravmaga-knee.jpg);
+    background-position: 55% 50%; 
+}
+.krav-bild3 {
+    background-image: url(/HTML-CSS-slutprojekt/IMG/kravmaga-knife.jpg);
+    background-position: 65% 50%;
+}
+.bjj-bild1, .krav-bild1 {
+    background-position: 80% 50%;  
+}
+.hero-start, .muaythai-bild2, .bjj-bild2, .bjj-bild3 {
+    background-position: 50% 50%;
 }
 
 .infogrid-container__item__knapp, .hero__text__knapp {
@@ -302,39 +376,40 @@ main {
     background-color: var(--dark-blue);
 }
 
+
 .muaythai-rubrik {
     color: var(--accent-green);
-    max-width: 80%;
 }
 
 .bjj-rubrik {
-    color: var(--light-orange);
-    max-width: 80%;
+    color:var(--light-orange);
 }
 
 .kravmaga-rubrik {
     color: var(--dark-blue);
-    max-width: 80%;
 }
 
 /* MAIN SLUT */
 
 
-
 /* FOOTER */
  .footer {
-     width: 100vw;
+     margin-top: 4rem;
     background: rgba(58, 58, 58, .5) url(/HTML-CSS-slutprojekt/IMG/footerbakgrund2.jpg);
     background-repeat: no-repeat;
-    background-position: 10% 50%;
     background-size: cover;
+    background-position: 10% 50%;
     color: rgb(34, 34, 34);
+    width: 100%;
+    height: 1100px;
+    background-color: gray;
+    border-top-left-radius: 340px;
     }
 
  .footer__grid-container {
      display: grid;
      grid-template-columns: repeat(1, 1fr);
-    /*  overflow-X: hidden; */
+    transform: translateY(130px);
  }
 
 
@@ -362,24 +437,75 @@ main {
 
 @media screen and (min-width: 600px) {
 
-    .hero {
-        background: rgba(58, 58, 58, .5) url(/HTML-CSS-slutprojekt/IMG/punching-bag.jpg);
+    .hero-start {
+        background: rgba(58, 58, 58, .5);
     }
-    .hero__text {
-        flex: 1;
-    }
+
     .hero__bild {
-        flex: 1;
+        background:  url(/HTML-CSS-slutprojekt/IMG/punching-bag.png);
+        background-repeat: no-repeat;
     } 
 
-.infogrid-container {
-    width: 500px;
-    grid-template-areas: 
-    "ruta-1-bild ruta-2-text"
-    "ruta-3-text ruta-4-bild"
-    "ruta-5-text ruta-6-bild";
-    gap: 20px;
+
+.hero__bild {
+    position: absolute;
+    top: 100px;
+    width: 50%;
+    height: 1500px;
+    transform-origin: top center;
+    animation: box-säck 1s ease-out infinite alternate;
+}
+.box-säck {
+    position: absolute;
+    height: 200px;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+@keyframes box-säck {
+    0% {
+        transform: rotate(20deg) scale(0.3);
     }
+    25% {
+        transform: rotate(10deg) scale(0.3);
+    }
+    50% {
+        transform: rotate(0deg) scale(0.3);
+    }
+    75% {
+        transform: rotate(-10deg) scale(0.3);
+    }
+    100% {
+        transform: rotate(-20deg) scale(0.3);
+    }
+}
+.infogrid-container {
+    grid-template-areas: 
+    "ruta-2-text ruta-1-bild"
+    "ruta-4-bild ruta-3-text"
+    "ruta-5-text ruta-6-bild"
+    ;
+    width: 85vw;
+    max-width: 1000px;
+    row-gap: 30px;
+    column-gap: 0;
+}
+
+    
+
+.infogrid-container > article.text {
+    width: fit-content;
+    margin: 0;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    padding: 2rem 0;
+    border-bottom: 5px dashed var(--dark-gray);
+    border-left: 5px dashed var(--dark-gray);
+    border-top: 5px dashed var(--dark-gray);
+}
 
     .hero__text__knapp, .infogrid-container__item__knapp {
         content: url(/HTML-CSS-slutprojekt/IMG/pil-ikon\ vit\ svart\ bakgrund.svg);
