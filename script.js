@@ -21,6 +21,5 @@ document.querySelectorAll('ul > li')
 theme.forEach(button => {
     button.addEventListener('click', (e)=>{
          document.querySelector('body').className=button.classList[1];
-         document.querySelector('header').classList.toggle('open');
     })
 })

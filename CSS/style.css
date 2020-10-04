@@ -3,9 +3,9 @@
     --dark-blue: #01264A;
     --light-orange: #F07132;
     --dark-orange: #BD5928;
-    --dark-gray: #3A3A3A;
+    --dark-gray: #898989;
     --dark-gray-transparent: rgba(58, 58, 58, 0.95);
-    --light-gray: #898989;
+    --light-gray: #dfdddd;
     --accent-green: #0E383A;
     --white-textoutline: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
     --black-textoutline: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -17,12 +17,16 @@ body {
     font-family: 'Days One', sans-serif;
     scroll-behavior: smooth;
     color: var(--dark-gray);
-    background-color: rgb(216, 213, 213);
-
+    background: url(/HTML-CSS-slutprojekt/IMG/background-vector-transparent2.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: var(--light-gray);
+    
 }
 
 h1 {
-    font-size: 5em;
+    font-size: 3rem;
     max-width: 80%;
     line-height: 6rem;
     display: inline-block;
@@ -37,6 +41,7 @@ h2 {
     font-size: 2em;
     max-width: 70%;
     line-height: 3rem;
+    margin-bottom: 0;
     display: inline-block;
 }
 
@@ -60,7 +65,30 @@ body.light-theme {
 
 header {
     width: 100%;
-    background: var(--light-gray);
+}
+
+
+.header .ytter-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    
+    padding: 0.3rem 0;
+    z-index: 9999;
+}
+.header .header__top {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+svg.logo {
+    fill: var(--light-orange);/* 
+    stroke: var(--light-orange); */
 }
 
 
@@ -68,7 +96,6 @@ header {
 header aside.logo-navicon {
     display: flex;
     flex-direction: row;
-   /*  width: 100vw; */
     justify-content: stretch;
     align-items: center;
     position: fixed;
@@ -86,7 +113,7 @@ header aside.logo-navicon svg.navicon rect {
 
 /* navicon blir ett kryss */
 header.open svg.navicon .navicon__linje-1 {
-    fill: var(--light-orange);
+    fill: white;
     transform: translate(-15px, 15px) rotate(45deg);
 } 
 header.open svg.navicon .navicon__linje-2 {
@@ -94,7 +121,7 @@ header.open svg.navicon .navicon__linje-2 {
     transform: rotate(45deg);
 } 
 header.open svg.navicon .navicon__linje-3 {
-    fill: var(--light-orange);
+    fill: white;
     transform: translate(-15px, -15px) rotate(-45deg);
 }
 /**/
@@ -113,7 +140,6 @@ header nav.navbar-container {
     width: 100vw;
     background: var(--dark-gray-transparent);
     transition: transform 0.5s ease-in;
-    z-index: 1;
 }
 
 header.open nav.navbar-container {
@@ -130,6 +156,7 @@ header.open nav.navbar-container {
     align-items: center;
     justify-content: space-evenly;
 }
+
 .navbar-container ul.navbar-container__link-list-container .nav-link {
     color: white;
     text-decoration: none;
@@ -176,20 +203,17 @@ header.open nav.navbar-container {
    justify-content: center;
    }
 
-
-
-   .hero-start {
-    background: rgba(58, 58, 58, .5) url(/HTML-CSS-slutprojekt/IMG/footerbakgrund2.jpg);
-    }
-
-   .hero-muaythai {
-    background-image: url(/HTML-CSS-slutprojekt/IMG/muaythai.jpg);
+   .hero__bild__thai {
+    background-image: url(/HTML-CSS-slutprojekt/IMG/muaythai-fight.jpg);
+    height: 40vh;
+    width: 40vh;
     background-position: 67% 20%;
    }
 
    .hero-bjj {
     background-image: url(/HTML-CSS-slutprojekt/IMG/bjj.jpg);
     background-position: 42% 30%;
+    width: 100vw;
    }
 
    .hero-kravmaga {
@@ -209,6 +233,7 @@ header.open nav.navbar-container {
        flex-direction: column;
        align-items: center;
        justify-content: center;
+       padding-top: 10vh;
    }
 
    .hero__text__ingress {
@@ -241,7 +266,10 @@ main {
     "ruta-5-text"
     ;
     width: 100%;
-    gap: 10px;
+    border-radius: 50px;
+    background-color: var(--dark-gray);
+    box-shadow: 0 2px 5px rgb(22, 22, 22);
+    padding-bottom: 50px;
 }
 .hero, .infogrid-container__muaythai-bild, .infogrid-container__bjj-bild, .infogrid-container__kravmaga-bild, .infogrid-container__item1,
  .infogrid-container__item4,.infogrid-container__item6, .footer{
@@ -250,7 +278,7 @@ main {
 
 .infogrid-container__muaythai-bild {
     grid-area: ruta-1-bild;
-    background-image: url(/HTML-CSS-slutprojekt/IMG/muaythai.jpg);
+    background-image: url(/HTML-CSS-slutprojekt/IMG/muaythai-fight.jpg);
     background-position: 67% 20%;
 }
 
@@ -284,9 +312,13 @@ main {
     align-items: center;
 }
 
+article.bild:first-child {
+    border-radius: 50px 50px 0 0;
+}
+
  article.bild, .muaythai-bild1, .muaythai-bild2, .muaythai-bild3, .bjj-bild1, .bjj-bild2, .bjj-bild3, .krav-bild1, .krav-bild2, .krav-bild3 {
     background-repeat: no-repeat;
-    height: 525px;
+    height: 70vh;
     width: auto;
     filter: grayscale(100);
 }
@@ -297,12 +329,18 @@ main {
     text-align: center;
     line-height: 2rem;
     font-size: 1.3rem;
-    padding: 2rem 0;
+    padding: 1rem 0 0 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 999;
+    height: 40vh;
+    transform: translateY(-10vh) skewY(-15deg);
+    background-color: var(--dark-gray);
 }
-
+.infogrid-container__item__rubrik, .infogrid-container__item__p, .infogrid-container__item__knapp {
+    transform: skewY(15deg);
+}
 .infogrid-container > article.text p {
     width: 80%;
 }
@@ -363,7 +401,6 @@ main {
     padding: 1rem 2.5rem;
     border-radius: 35px;
     letter-spacing: .1rem;
-    border: 2px solid white;
     box-shadow: 0 1px 5px rgba(58, 58, 58, .5);
 }
 
@@ -396,15 +433,9 @@ main {
 /* FOOTER */
  .footer {
      margin-top: 4rem;
-    background: rgba(58, 58, 58, .5) url(/HTML-CSS-slutprojekt/IMG/footerbakgrund2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 10% 50%;
-    color: rgb(34, 34, 34);
     width: 100%;
-    height: 1100px;
-    background-color: gray;
-    border-top-left-radius: 340px;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px; 
     }
 
  .footer__grid-container {
@@ -415,17 +446,60 @@ main {
 
 
 .footer__grid-container__item {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-    padding: 2rem 0;
+    width: 90vw;
+    height: 90vw;
+    margin: 1rem auto;
+    padding: 0;
     line-height: 2rem;
     font-size: 1.3rem;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    border-radius: 100%;
+    background-color: #0e383a9c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer__grid-container__item:first-child {
+    background-color: var(--light-orange);
+    background: rgba(240,113,50,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(240,113,50,1) 0%, rgba(240,113,50,0.67) 68%, rgba(255,255,255,0.51) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(240,113,50,1)), color-stop(68%, rgba(240,113,50,0.67)), color-stop(100%, rgba(255,255,255,0.51)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(240,113,50,1) 0%, rgba(240,113,50,0.67) 68%, rgba(255,255,255,0.51) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(240,113,50,1) 0%, rgba(240,113,50,0.67) 68%, rgba(255,255,255,0.51) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(240,113,50,1) 0%, rgba(240,113,50,0.67) 68%, rgba(255,255,255,0.51) 100%);
+    background: radial-gradient(ellipse at center, rgba(240,113,50,1) 0%, rgba(240,113,50,0.67) 68%, rgba(255,255,255,0.51) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f07132', endColorstr='#ffffff', GradientType=1 );}
+
+.footer__grid-container__item:nth-child(2) {
+    background-color: var(--accent-green);
+    background: rgba(21,56,58,1);
+background: -moz-radial-gradient(center, ellipse cover, rgba(21,56,58,1) 0%, rgba(21,56,58,0.67) 68%, rgba(255,255,255,0.51) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(21,56,58,1)), color-stop(68%, rgba(21,56,58,0.67)), color-stop(100%, rgba(255,255,255,0.51)));
+background: -webkit-radial-gradient(center, ellipse cover, rgba(21,56,58,1) 0%, rgba(21,56,58,0.67) 68%, rgba(255,255,255,0.51) 100%);
+background: -o-radial-gradient(center, ellipse cover, rgba(21,56,58,1) 0%, rgba(21,56,58,0.67) 68%, rgba(255,255,255,0.51) 100%);
+background: -ms-radial-gradient(center, ellipse cover, rgba(21,56,58,1) 0%, rgba(21,56,58,0.67) 68%, rgba(255,255,255,0.51) 100%);
+background: radial-gradient(ellipse at center, rgba(21,56,58,1) 0%, rgba(21,56,58,0.67) 68%, rgba(255,255,255,0.51) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15383a', endColorstr='#ffffff', GradientType=1 );
+}
+
+.footer__grid-container__item:nth-child(3) {
+    background-color: var(--dark-blue);
+    background: rgba(4,38,74,1);
+background: -moz-radial-gradient(center, ellipse cover, rgba(4,38,74,1) 0%, rgba(4,38,74,0.67) 68%, rgba(255,255,255,0.51) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(4,38,74,1)), color-stop(68%, rgba(4,38,74,0.67)), color-stop(100%, rgba(255,255,255,0.51)));
+background: -webkit-radial-gradient(center, ellipse cover, rgba(4,38,74,1) 0%, rgba(4,38,74,0.67) 68%, rgba(255,255,255,0.51) 100%);
+background: -o-radial-gradient(center, ellipse cover, rgba(4,38,74,1) 0%, rgba(4,38,74,0.67) 68%, rgba(255,255,255,0.51) 100%);
+background: -ms-radial-gradient(center, ellipse cover, rgba(4,38,74,1) 0%, rgba(4,38,74,0.67) 68%, rgba(255,255,255,0.51) 100%);
+background: radial-gradient(ellipse at center, rgba(4,38,74,1) 0%, rgba(4,38,74,0.67) 68%, rgba(255,255,255,0.51) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', endColorstr='#ffffff', GradientType=1 );
 }
 
 .footer__grid-container__item a {
     text-decoration: none;
-    color: var(--accent-green);
+    color: white;
     font-size: 1.7rem;
 }
 
@@ -436,21 +510,29 @@ main {
     top: 0;
     right: 0;
     width: 100vw;
-    z-index: 9;
     display: flex;
 }
 
-.header .header__top {
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    width: 80vw;
-    margin: 0 auto;
-}
 
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
+    
+    body {
+        box-sizing: border-box;
+    }
+
+    body.body__background {
+        z-index:100;
+        position: fixed;
+        top:0;
+        left:0;
+        right:0;
+    }
+
+    h1 {
+        text-shadow: none;
+    }
 
     .header .ytter-container {
         position: fixed;
@@ -458,17 +540,17 @@ main {
         top: 0;
         right: 0;
         width: 100vw;
-        z-index: 9;
         background: #61616186;
         padding: 0.8rem 0;
+        z-index: 9999;
     }
 
     .header .header__top {
         height: 50px;
-        display: flex;
-        justify-content: center;
-        width: 80vw;
-        margin: 0 auto;
+    display: flex;
+    width: 80vw;
+    margin: 0 auto;
+       
     }
 
     header aside.logo-navicon{
@@ -476,7 +558,6 @@ main {
         width: auto; 
         align-items: center;
         position: relative;
-        z-index: 9999;
         transform-origin: left;
     }
 
@@ -487,10 +568,10 @@ main {
         justify-content: stretch;
         align-items: center;
         position: relative;
-        z-index: 9999;
     }
 
     path.logo__del1 {
+        fill: white;
         transition: all .5s linear 75ms;
     }
     svg.logo:hover path.logo__del1{
@@ -498,6 +579,8 @@ main {
     }
 
     path.logo__del2 {
+        fill: white;
+        stroke: white;
         transition: all 0.5s ease 25ms;
     }
 
@@ -507,6 +590,8 @@ main {
     }
 
     path.logo__del3 {
+        stroke: white;
+        fill: white;
         transition: all 0.5s ease 12.5ms;
     }
     svg.logo:hover path.logo__del3 {
@@ -515,6 +600,8 @@ main {
     }
 
     path.logo__del4 {
+        stroke: white;
+        fill: white;
         transition: all 0.5s ease;
     }
     svg.logo:hover path.logo__del4 {
@@ -524,6 +611,7 @@ main {
 
     .navicon {
         height: 0;
+        width: 0;
     }
     header nav.navbar-container {
         left: 0;
@@ -531,27 +619,32 @@ main {
         flex-direction: row;
         position: relative;
         background-color: #3a3a3a00;
+        width: auto;
+        transform: translateX(-20px);
     }
 
     nav.navbar-container ul.navbar-container__link-list-container {
         height: 50px;
         flex-direction: row;
-        width: 50vw;
-        min-width: 360px;
     }
     nav.navbar-container ul.navbar-container__link-list-container .nav-link {
         color: white;
         text-decoration: none;
-        font-size: 1rem;
+        font-size: .6rem;
         letter-spacing: 0.2rem;
         transition: all .2s ease-in;
+        padding: 0 0.2rem;
     } 
 
-    nav.navbar-container ul.navbar-container__link-list-container .nav-link:hover, .footer__grid-container__item a:hover {
+    nav.navbar-container ul.navbar-container__link-list-container .nav-link:hover{
         color: var(--light-orange);
         padding: 0.5rem;
         border: 1px dashed var(--dark-blue);
         border-radius: 10px;
+    }
+
+    .footer__grid-container__item a:hover .footer__grid-container__item  {
+        border:2px dotted blue;
     }
 
     .navbar-container aside.navbar-container__color-schemes {
@@ -601,51 +694,56 @@ main {
     
 
     /* SLUT PÅ NAVBAR */
+    .hero {
+        height: 100vh;
+       background-repeat: no-repeat;
+       color: rgb(34, 34, 34);
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+        display: flex;
+        justify-content: center;
+       }
+      
+   
+    .hero {
+         display:flex;
+        flex-direction: row;
+       
+        }
 
-
-    .hero-start {
-        background: rgba(58, 58, 58, .5);
-        padding-top: 50px;
+    .hero__text {
+        flex: 2; 
     }
 
     .hero__bild {
-        background:  url(/HTML-CSS-slutprojekt/IMG/punching-bag.png);
+        background:  url(/HTML-CSS-slutprojekt/IMG/punching-bag.png); /* PNG-format för att ha genomskinliga områden i fotot */
         background-repeat: no-repeat;
-    } 
-
-
-.hero__bild {
-    position: absolute;
-    top: 100px;
-    width: 50%;
-    height: 1500px;
-    transform-origin: top center;
-    animation: box-säck 1s ease-out infinite alternate;
-}
-.box-säck {
-    position: absolute;
-    height: 200px;
-    width: auto;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
+        transform:  scale(0.3);
+        flex: 1;
+        height: 1500px;
+        transform-origin: center top;
+        transform-origin: 3cm 0cm;
+        animation: box-säck 1s ease-in-out infinite alternate;
+        z-index: 999;  
+        margin-top: 100px;
+    }
 
 @keyframes box-säck {
     0% {
-        transform: rotate(20deg) scale(0.3);
+        transform: rotate(6deg) scale(0.3);
     }
     25% {
-        transform: rotate(10deg) scale(0.3);
+        transform: rotate(3deg) scale(0.3);
     }
     50% {
         transform: rotate(0deg) scale(0.3);
     }
     75% {
-        transform: rotate(-10deg) scale(0.3);
+        transform: rotate(-3deg) scale(0.3);
     }
     100% {
-        transform: rotate(-20deg) scale(0.3);
+        transform: rotate(-6deg) scale(0.3);
     }
 }
 .infogrid-container {
@@ -656,23 +754,25 @@ main {
     ;
     width: 85vw;
     max-width: 1000px;
-    row-gap: 30px;
+    row-gap: 20vh;
     column-gap: 0;
+    background-color: transparent;
+    box-shadow: none;
 }
 
     
 
 .infogrid-container > article.text {
+    box-sizing: border-box;
     width: fit-content;
     margin: 0;
     text-align: center;
     line-height: 2rem;
     font-size: 1.3rem;
     padding: 2rem 0;
-    border-bottom: 5px dashed var(--dark-gray);
-    border-left: 5px dashed var(--dark-gray);
-    border-top: 5px dashed var(--dark-gray);
+    
 }
+
 
     .hero__text__knapp, .infogrid-container__item__knapp {
         content: url(/HTML-CSS-slutprojekt/IMG/pil-vit-genomskinlig.svg);
@@ -692,4 +792,119 @@ main {
         transform:translateX(52px);
     }
 
+
+
+
+
+article.bild, .muaythai-bild1, .muaythai-bild2, .muaythai-bild3, .bjj-bild1, .bjj-bild2, .bjj-bild3, .krav-bild1, .krav-bild2, .krav-bild3 {
+    background-repeat: no-repeat;
+    height: 30vw;
+    width: auto;
+    filter: grayscale(100);
+    min-height: 300px;
+}
+
+article.bild:first-child {
+    border-radius: 0;
+}
+
+.infogrid-container > article.text {
+    margin: 0;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 999;
+    height: 30vw;
+    min-height: 300px;
+    transform: translateY(0vh) skewY(0deg);
+    background-color: lightgrey;
+    width: 100%;
+}
+.infogrid-container__item__rubrik, .infogrid-container__item__p, .infogrid-container__item__knapp {
+    transform: skewY(0deg);
+    margin: 0;
+}
+.infogrid-container > article.text p {
+    width: 80%;
+}
+
+.footer {
+    
+   width: 100%;
+   }
+
+   .footer__grid-container{
+       width: 85vw;
+       grid-template-columns: repeat(3, 1fr);
+       margin: 0 auto;
+       border-top: 2px solid var(--accent-green);
+       padding-top: 40px;
+   }
+   
+   
+
+.footer__grid-container__item {
+    width: 25vw;
+    height: 25vw;
+    max-width: 300px;
+    max-height: 300px;
+    margin: 1rem auto;
+    padding: 0;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    border-radius: 100%;
+    background-color: #0e383a9c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.footer__grid-container__item a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+}
+
+}
+
+
+
+
+
+@media screen and (min-width: 900px) {
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    .navbar-container {
+        width: 50vw;
+    }
+
+    .header .header__top {
+        justify-content: space-between;
+    }
+    .nav-link {
+        font-size: 1rem;
+        padding: 0 .3rem;
+        max-width: fit-content;
+    }
+    .hero__text {
+        flex: 2; 
+    }
+
+    .hero__bild {
+        flex: 1;
+    }
+    .infogrid-container__item__rubrik, .infogrid-container__item__p, .infogrid-container__item__knapp {
+        margin: .8rem;
+    }
 }
