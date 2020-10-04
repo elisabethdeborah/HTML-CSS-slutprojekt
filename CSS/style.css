@@ -68,7 +68,7 @@ header {
 header aside.logo-navicon {
     display: flex;
     flex-direction: row;
-    width: 100vw;
+   /*  width: 100vw; */
     justify-content: stretch;
     align-items: center;
     position: fixed;
@@ -84,7 +84,7 @@ header aside.logo-navicon svg.navicon rect {
     transform-origin: center;
 }
 
-
+/* navicon blir ett kryss */
 header.open svg.navicon .navicon__linje-1 {
     fill: var(--light-orange);
     transform: translate(-15px, 15px) rotate(45deg);
@@ -97,6 +97,7 @@ header.open svg.navicon .navicon__linje-3 {
     fill: var(--light-orange);
     transform: translate(-15px, -15px) rotate(-45deg);
 }
+/**/
 
 header nav.navbar-container {
     position: fixed;
@@ -144,8 +145,8 @@ header.open nav.navbar-container {
 }
 
 .navbar-container aside.navbar-container__color-schemes > article {
-    height: 3rem;
-    width: 3rem;
+    height: 2.5rem;
+    width: 2.5rem;
     border-radius: 100%;
     border: .2rem double white;
     margin: 0 .5rem;
@@ -429,16 +430,182 @@ main {
 }
 
 
+.header .ytter-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    z-index: 9;
+    display: flex;
+}
 
-
-
+.header .header__top {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    margin: 0 auto;
+}
 
 
 
 @media screen and (min-width: 600px) {
 
+    .header .ytter-container {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        z-index: 9;
+        background: #61616186;
+        padding: 0.8rem 0;
+    }
+
+    .header .header__top {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    header aside.logo-navicon{
+        display: flex;
+        width: auto; 
+        align-items: center;
+        position: relative;
+        z-index: 9999;
+        transform-origin: left;
+    }
+
+    header aside.logo-navicon {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        justify-content: stretch;
+        align-items: center;
+        position: relative;
+        z-index: 9999;
+    }
+
+    path.logo__del1 {
+        transition: all .5s linear 75ms;
+    }
+    svg.logo:hover path.logo__del1{
+        fill: var(--light-orange); 
+    }
+
+    path.logo__del2 {
+        transition: all 0.5s ease 25ms;
+    }
+
+    svg.logo:hover path.logo__del2 {
+        fill: var(--dark-blue);
+        stroke: var(--dark-blue);
+    }
+
+    path.logo__del3 {
+        transition: all 0.5s ease 12.5ms;
+    }
+    svg.logo:hover path.logo__del3 {
+        fill: var(--accent-green);
+        stroke: var(--accent-green);
+    }
+
+    path.logo__del4 {
+        transition: all 0.5s ease;
+    }
+    svg.logo:hover path.logo__del4 {
+        fill: var(--light-orange);
+        stroke: var(--light-orange);
+    }
+
+    .navicon {
+        height: 0;
+    }
+    header nav.navbar-container {
+        left: 0;
+        height: 50px;
+        flex-direction: row;
+        position: relative;
+        background-color: #3a3a3a00;
+    }
+
+    nav.navbar-container ul.navbar-container__link-list-container {
+        height: 50px;
+        flex-direction: row;
+        width: 50vw;
+        min-width: 360px;
+    }
+    nav.navbar-container ul.navbar-container__link-list-container .nav-link {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        letter-spacing: 0.2rem;
+        transition: all .2s ease-in;
+    } 
+
+    nav.navbar-container ul.navbar-container__link-list-container .nav-link:hover, .footer__grid-container__item a:hover {
+        color: var(--light-orange);
+        padding: 0.5rem;
+        border: 1px dashed var(--dark-blue);
+        border-radius: 10px;
+    }
+
+    .navbar-container aside.navbar-container__color-schemes {
+        margin: 0;
+    }
+    .navbar-container aside.navbar-container__color-schemes > article {
+        transition: all 1s ease;
+    }
+    .navbar-container aside.navbar-container__color-schemes > article:hover {
+        transform: rotate(1280deg);
+    }
+
+    .navbar-container aside.navbar-container__color-schemes .dark-theme:hover {
+        border: .2rem solid var(--light-orange);
+        background: rgba(22,69,112,1);
+        background: -moz-radial-gradient(center, ellipse cover, rgba(22,69,112,1) 0%, rgba(22,69,112,1) 5%, rgba(1,38,74,1) 74%, rgba(1,38,74,1) 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(22,69,112,1)), color-stop(5%, rgba(22,69,112,1)), color-stop(74%, rgba(1,38,74,1)), color-stop(100%, rgba(1,38,74,1)));
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(22,69,112,1) 0%, rgba(22,69,112,1) 5%, rgba(1,38,74,1) 74%, rgba(1,38,74,1) 100%);
+        background: -o-radial-gradient(center, ellipse cover, rgba(22,69,112,1) 0%, rgba(22,69,112,1) 5%, rgba(1,38,74,1) 74%, rgba(1,38,74,1) 100%);
+        background: -ms-radial-gradient(center, ellipse cover, rgba(22,69,112,1) 0%, rgba(22,69,112,1) 5%, rgba(1,38,74,1) 74%, rgba(1,38,74,1) 100%);
+        background: radial-gradient(ellipse at center, rgba(22,69,112,1) 0%, rgba(22,69,112,1) 5%, rgba(1,38,74,1) 74%, rgba(1,38,74,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#164570', endColorstr='#01264a', GradientType=1 );
+    }
+
+    .navbar-container aside.navbar-container__color-schemes .colorful-theme:hover {
+        border: .2rem solid var(--light-gray);
+        background: rgba(242,164,128,1);
+        background: -moz-radial-gradient(center, ellipse cover, rgba(242,164,128,1) 0%, rgba(242,164,128,1) 5%, rgba(240,113,50,1) 74%, rgba(240,113,50,1) 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(242,164,128,1)), color-stop(5%, rgba(242,164,128,1)), color-stop(74%, rgba(240,113,50,1)), color-stop(100%, rgba(240,113,50,1)));
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(242,164,128,1) 0%, rgba(242,164,128,1) 5%, rgba(240,113,50,1) 74%, rgba(240,113,50,1) 100%);
+        background: -o-radial-gradient(center, ellipse cover, rgba(242,164,128,1) 0%, rgba(242,164,128,1) 5%, rgba(240,113,50,1) 74%, rgba(240,113,50,1) 100%);
+        background: -ms-radial-gradient(center, ellipse cover, rgba(242,164,128,1) 0%, rgba(242,164,128,1) 5%, rgba(240,113,50,1) 74%, rgba(240,113,50,1) 100%);
+        background: radial-gradient(ellipse at center, rgba(242,164,128,1) 0%, rgba(242,164,128,1) 5%, rgba(240,113,50,1) 74%, rgba(240,113,50,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2a480', endColorstr='#f07132', GradientType=1 );
+    }
+    .navbar-container aside.navbar-container__color-schemes .light-theme:hover {
+        border: .2rem solid var(--dark-blue);
+        background: rgba(189,185,189,1);
+        background: -moz-radial-gradient(center, ellipse cover, rgba(189,185,189,1) 0%, rgba(189,185,189,1) 5%, rgba(137,137,137,1) 74%, rgba(137,137,137,1) 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(189,185,189,1)), color-stop(5%, rgba(189,185,189,1)), color-stop(74%, rgba(137,137,137,1)), color-stop(100%, rgba(137,137,137,1)));
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(189,185,189,1) 0%, rgba(189,185,189,1) 5%, rgba(137,137,137,1) 74%, rgba(137,137,137,1) 100%);
+        background: -o-radial-gradient(center, ellipse cover, rgba(189,185,189,1) 0%, rgba(189,185,189,1) 5%, rgba(137,137,137,1) 74%, rgba(137,137,137,1) 100%);
+        background: -ms-radial-gradient(center, ellipse cover, rgba(189,185,189,1) 0%, rgba(189,185,189,1) 5%, rgba(137,137,137,1) 74%, rgba(137,137,137,1) 100%);
+        background: radial-gradient(ellipse at center, rgba(189,185,189,1) 0%, rgba(189,185,189,1) 5%, rgba(137,137,137,1) 74%, rgba(137,137,137,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bdb9bd', endColorstr='#898989', GradientType=1 );
+    }
+    
+
+    /* SLUT PÅ NAVBAR */
+
+
     .hero-start {
         background: rgba(58, 58, 58, .5);
+        padding-top: 50px;
     }
 
     .hero__bild {
@@ -508,6 +675,21 @@ main {
 }
 
     .hero__text__knapp, .infogrid-container__item__knapp {
-        content: url(/HTML-CSS-slutprojekt/IMG/pil-ikon\ vit\ svart\ bakgrund.svg);
+        content: url(/HTML-CSS-slutprojekt/IMG/pil-vit-genomskinlig.svg);
+        width: 50px;
+        height: 50px;
+        padding: 1rem 1rem;
+        border-radius: 100%;
+        transition: all .5s ease-in;
     } 
+
+    .hero__text__knapp:hover, .infogrid-container__item__knapp:hover {
+        box-shadow: 0 0 10px #3A3A3A;
+        filter: brightness(0.6);
+    }
+
+    .hero__text__knapp:active, .infogrid-container__item__knapp:active {
+        transform:translateX(52px);
+    }
+
 }
