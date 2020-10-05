@@ -16,26 +16,24 @@ body {
     box-sizing: border-box;
     
     scroll-behavior: smooth;
-    color: var(--dark-gray);
+    color: white;
     background: url(/HTML-CSS-slutprojekt/IMG/background-vector-transparent2.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
     background-color: var(--light-gray);
     font-family: 'Orbitron', sans-serif;
-    
 }
 
 h1 {
-    font-size: 3rem;
-    max-width: 80%;
+    font-size: 4rem;
     line-height: 6rem;
     display: inline-block;
     text-align: center;
     text-shadow: var(--white-textoutline);
-    word-wrap: break-word;
     margin: 0 auto;
 }
+
 
 h2 {
     font-size: 2em;
@@ -43,10 +41,12 @@ h2 {
     line-height: 3rem;
     margin-bottom: 0;
     display: inline-block;
+    word-wrap: break-word;
 }
 
 p {
     font-family: 'Roboto', sans-serif;
+    line-height: 2rem;
 }
 
 svg{
@@ -59,6 +59,10 @@ svg{
 body.dark-theme {
     background-color: var(--light-blue);
     background-image: url(/HTML-CSS-slutprojekt/IMG/background-vector-blue.svg);
+}
+
+body.dark-theme h1 {
+    text-shadow: none;
 }
 body.dark-theme header .ytter-container {
     background-color: #01254a60;
@@ -163,7 +167,7 @@ header aside.logo-navicon {
     justify-content: stretch;
     align-items: center;
     position: fixed;
-    z-index: 9999;
+    z-index: 999;
 }
 
 header aside.logo-navicon a.logo-link {
@@ -265,19 +269,32 @@ header.open nav.navbar-container {
    display: flex;
    flex-direction: column;
    justify-content: center;
+   align-items: center;
+    padding: 3rem 0 0 0;
    }
+
+   .start-rubrik {
+    color: var(--accent-green);
+    word-break: break-all;
+   
+   }
+
+   .hero__bild__stil {
+    height: 40vh;
+    width: 40vh;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+}
 
    .hero__bild__thai {
     background-image: url(/HTML-CSS-slutprojekt/IMG/muaythai-fight.jpg);
-    height: 40vh;
-    width: 40vh;
     background-position: 67% 20%;
    }
-
+ 
    .hero-bjj {
     background-image: url(/HTML-CSS-slutprojekt/IMG/bjj.jpg);
     background-position: 42% 30%;
-    width: 100vw;
    }
 
    .hero-kravmaga {
@@ -382,7 +399,7 @@ article.bild:first-child {
 
  article.bild, .muaythai-bild1, .muaythai-bild2, .muaythai-bild3, .bjj-bild1, .bjj-bild2, .bjj-bild3, .krav-bild1, .krav-bild2, .krav-bild3 {
     background-repeat: no-repeat;
-    height: 70vh;
+    height: 50vh;
     width: auto;
     filter: grayscale(100);
 }
@@ -398,13 +415,18 @@ article.bild:first-child {
     flex-direction: column;
     justify-content: center;
     z-index: 999;
-    height: 40vh;
-    transform: translateY(-10vh) skewY(-15deg);
+    height: 50vh;
+    transform: translateY(-10vh) skewY(-10deg);
     background-color: var(--dark-gray);
 }
 .infogrid-container__item__rubrik, .infogrid-container__item__p, .infogrid-container__item__knapp {
-    transform: skewY(15deg);
+    transform: skewY(10deg);
 }
+
+.infogrid-container__item__rubrik {
+    padding-top: 20px;
+}
+
 .infogrid-container > article.text p {
     width: 80%;
 }
@@ -472,7 +494,7 @@ article.bild:first-child {
     background-color: var(--accent-green);
 }
 .knapp__bjj {
-    background-color: var(--light-orange);
+    background-color: var(--dark-orange);
 }
 .knapp__kravmaga {
     background-color: var(--dark-blue);
@@ -484,7 +506,7 @@ article.bild:first-child {
 }
 
 .bjj-rubrik {
-    color:var(--light-orange);
+    color:var(--dark-orange);
 }
 
 .kravmaga-rubrik {
@@ -563,8 +585,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
 
 .footer__grid-container__item a {
     text-decoration: none;
-    color: white;/* 
-    text-shadow: var(--white-textoutline); */
+    color: white;
     font-size: 1.7rem;
     transition: all 1s ease;
 }
@@ -604,6 +625,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
 
     h1 {
         text-shadow: none;
+        font-size: 3rem;
+        display: inline-block;
     }
 
     .header .ytter-container {
@@ -619,19 +642,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
 
     .header .header__top {
         height: 3.1rem;
-    display: flex;
-    width: 80vw;
-    margin: 0 auto;
-       
+        display: flex;
+        width: 80vw;
+        margin: 0 auto;
     }
 
-    header aside.logo-navicon{
-        display: flex;
-        width: auto; 
-        align-items: center;
-        position: relative;
-        transform-origin: left;
-    }
+   
 
     header aside.logo-navicon {
         display: flex;
@@ -640,7 +656,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
         justify-content: stretch;
         align-items: center;
         position: relative;
+        z-index: 1;
+        transform-origin: left;
     }
+
+    
 
     path.logo__del1 {
         fill: white;
@@ -682,9 +702,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
     }
 
 
-    .navicon {
+    svg.navicon {
         height: 0;
         width: 0;
+        z-index: -1;
     }
     header nav.navbar-container {
         left: 0;
@@ -694,6 +715,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
         background-color: #3a3a3a00;
         width: auto;
         transform: translateX(-1.25rem);
+        z-index: 999;
     }
 
     nav.navbar-container ul.navbar-container__link-list-container {
@@ -771,31 +793,37 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
        flex-direction: column;
        justify-content: center;
         display: flex;
-        justify-content: center;
+        align-items: center;
        }
       
-   
+    
     .hero {
          display:flex;
         flex-direction: row;
-       
+        }
+    
+        .hero-start {
+            padding: 0;
         }
 
-    .hero__text {
-        flex: 2; 
+    .hero__bild__stil {
+        height: 400px;
+        width: 400px;
+        border-radius: 100%;
     }
 
-    .hero__bild {
+
+    .hero__bild__start {
         background:  url(/HTML-CSS-slutprojekt/IMG/punching-bag.png); /* PNG-format för att ha genomskinliga områden i fotot */
         background-repeat: no-repeat;
         transform:  scale(0.3);
-        flex: 1;
         height: 94rem;
         transform-origin: center top;
         transform-origin: 3cm 0cm;
         animation: box-säck 1s ease-in-out infinite alternate;
         z-index: 999;  
-        margin-top: 6.3rem;
+        margin-top: 52rem;
+        border-radius: 0;
     }
 
 @keyframes box-säck {
@@ -827,6 +855,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
     column-gap: 0;
     background-color: transparent;
     box-shadow: none;
+    color: var(--dark-gray);
 }
 
     
@@ -861,13 +890,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
         transform:translateX(3.25rem);
     }
 
-
-
-
-
 article.bild, .muaythai-bild1, .muaythai-bild2, .muaythai-bild3, .bjj-bild1, .bjj-bild2, .bjj-bild3, .krav-bild1, .krav-bild2, .krav-bild3 {
     background-repeat: no-repeat;
-    height: 30vw;
+    height: 80vw;
     width: auto;
     filter: grayscale(100);
     min-height: 18.75rem;
@@ -887,7 +912,7 @@ article.bild:first-child {
     flex-direction: column;
     justify-content: center;
     z-index: 999;
-    height: 30vw;
+    height: 80vw;
     min-height: 18.75rem;
     transform: translateY(0vh) skewY(0deg);
     background-color: lightgrey;
@@ -914,8 +939,6 @@ article.bild:first-child {
        padding-top: 2.5rem;
    }
    
-   
-
 .footer__grid-container__item {
     width: 25vw;
     height: 25vw;
@@ -939,12 +962,15 @@ article.bild:first-child {
 .footer__grid-container__item a {
     color: grey;
     text-shadow: var(--white-textoutline);
+    }
 }
 
+
+@media screen and (min-width: 800px) {
+    .infogrid-container > article.text, .infogrid-container > article.bild, .muaythai-bild1, .muaythai-bild2, .muaythai-bild3, .bjj-bild1, .bjj-bild2, .bjj-bild3, .krav-bild1, .krav-bild2, .krav-bild3 {
+        height: 60vh;
+    }
 }
-
-
-
 
 
 @media screen and (min-width: 1000px) {
@@ -965,14 +991,34 @@ article.bild:first-child {
         padding: 0 .3rem;
         max-width: fit-content;
     }
+
+    .hero {
+        padding: 0 10rem;
+    }
+
+    .hero-start {
+        padding: 0;
+    }
     .hero__text {
+        flex: 1; 
+    }
+
+    .hero__text__start {
         flex: 2; 
     }
 
     .hero__bild {
         flex: 1;
     }
+
+    .infogrid-container {
+        margin-top: 4vh;
+    }
     .infogrid-container__item__rubrik, .infogrid-container__item__p, .infogrid-container__item__knapp {
         margin: .8rem;
+    }
+
+    .infogrid-container > article.text, .infogrid-container > article.bild, .muaythai-bild1, .muaythai-bild2, .muaythai-bild3, .bjj-bild1, .bjj-bild2, .bjj-bild3, .krav-bild1, .krav-bild2, .krav-bild3 {
+        height: 50vh;
     }
 }
