@@ -1,7 +1,7 @@
 :root {
-    --light-blue: #113456;
+    --light-blue: #244563;
     --dark-blue: #01264A;
-    --light-orange: #F07132;
+    --light-orange: #f07132e6;
     --dark-orange: #BD5928;
     --dark-gray: #898989;
     --dark-gray-transparent: rgba(58, 58, 58, 0.95);
@@ -14,7 +14,7 @@
 body {
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Days One', sans-serif;
+    
     scroll-behavior: smooth;
     color: var(--dark-gray);
     background: url(/HTML-CSS-slutprojekt/IMG/background-vector-transparent2.svg);
@@ -22,6 +22,7 @@ body {
     background-repeat: no-repeat;
     background-position: top;
     background-color: var(--light-gray);
+    font-family: 'Orbitron', sans-serif;
     
 }
 
@@ -34,7 +35,6 @@ h1 {
     text-shadow: var(--white-textoutline);
     word-wrap: break-word;
     margin: 0 auto;
-
 }
 
 h2 {
@@ -45,23 +45,89 @@ h2 {
     display: inline-block;
 }
 
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
 svg{
     overflow: visible;
 }
 
 /* FÄRGTEMAN */
+
+/* DARK THEME */
 body.dark-theme {
     background-color: var(--light-blue);
+    background-image: url(/HTML-CSS-slutprojekt/IMG/background-vector-blue.svg);
+}
+body.dark-theme header .ytter-container {
+    background-color: #01254a60;
 }
 
+body.dark-theme svg.logo:hover path.logo__del1, body.dark-theme svg.logo:hover path.logo__del2, body.dark-theme svg.logo:hover path.logo__del3, body.dark-theme svg.logo:hover path.logo__del4 {
+    fill: var(--light-orange);
+    stroke: var(--light-orange);
+}
+
+body.dark-theme .hero__text__h1, body.dark-theme .hero__text__ingress {
+    color: var(--light-gray);
+}
+
+
+body.dark-theme .footer__grid-container__item:nth-child(3) {
+    background: rgba(137,137,137,1);
+background: -moz-radial-gradient(center, ellipse cover, rgba(137,137,137,1) 0%, rgba(137,137,137,0.67) 68%, rgba(255,255,255,0.51) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(137,137,137,1)), color-stop(68%, rgba(137,137,137,0.67)), color-stop(100%, rgba(255,255,255,0.51)));
+background: -webkit-radial-gradient(center, ellipse cover, rgba(137,137,137,1) 0%, rgba(137,137,137,0.67) 68%, rgba(255,255,255,0.51) 100%);
+background: -o-radial-gradient(center, ellipse cover, rgba(137,137,137,1) 0%, rgba(137,137,137,0.67) 68%, rgba(255,255,255,0.51) 100%);
+background: -ms-radial-gradient(center, ellipse cover, rgba(137,137,137,1) 0%, rgba(137,137,137,0.67) 68%, rgba(255,255,255,0.51) 100%);
+background: radial-gradient(ellipse at center, rgba(137,137,137,1) 0%, rgba(137,137,137,0.67) 68%, rgba(255,255,255,0.51) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#898989', endColorstr='#ffffff', GradientType=1 );
+}
+
+/* SLUT DARK THEME */
+
+
+
+/* COLORFUL THEME */
 body.colorful-theme {
     background-color: var(--light-orange);
+    background-image: url(/HTML-CSS-slutprojekt/IMG/background-vector-orange.svg);
+}
+body.colorful-theme header .ytter-container {
+    background-color: #bd5a2888;
+}
+body.colorful-theme svg.logo:hover path.logo__del1, body.colorful-theme svg.logo:hover path.logo__del2, body.colorful-theme svg.logo:hover path.logo__del3, body.colorful-theme svg.logo:hover path.logo__del4 {
+    fill: var(--accent-green);
+    stroke: var(--accent-green);
 }
 
+body.colorful-theme nav.navbar-container ul.navbar-container__link-list-container .nav-link:hover{
+    color: yellow;
+    padding: 0.5rem;
+    border: 1px dashed var(--light-gray);
+    border-radius: 10px;
+}
+
+body.colorful-theme .footer__grid-container__item:first-child {
+    background: rgba(137,137,137,1);
+background: -moz-radial-gradient(center, ellipse cover, rgba(137,137,137,1) 0%, rgba(137,137,137,0.67) 68%, rgba(255,255,255,0.51) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(137,137,137,1)), color-stop(68%, rgba(137,137,137,0.67)), color-stop(100%, rgba(255,255,255,0.51)));
+background: -webkit-radial-gradient(center, ellipse cover, rgba(137,137,137,1) 0%, rgba(137,137,137,0.67) 68%, rgba(255,255,255,0.51) 100%);
+background: -o-radial-gradient(center, ellipse cover, rgba(137,137,137,1) 0%, rgba(137,137,137,0.67) 68%, rgba(255,255,255,0.51) 100%);
+background: -ms-radial-gradient(center, ellipse cover, rgba(137,137,137,1) 0%, rgba(137,137,137,0.67) 68%, rgba(255,255,255,0.51) 100%);
+background: radial-gradient(ellipse at center, rgba(137,137,137,1) 0%, rgba(137,137,137,0.67) 68%, rgba(255,255,255,0.51) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#898989', endColorstr='#ffffff', GradientType=1 );
+}
+/* SLUT COLORFUL THEME */
+
+/* LIGHT THEME */
 body.light-theme {
     background-color: rgb(216, 213, 213);
 }
-/**/
+/* SLUT LIGHT THEME */
+
+/* SLUT PÅ FÄRGTEMAN */
 
 header {
     width: 100%;
@@ -74,12 +140,11 @@ header {
     top: 0;
     right: 0;
     width: 100vw;
-    
     padding: 0.3rem 0;
     z-index: 9999;
 }
 .header .header__top {
-    height: 50px;
+    height: 3.1rem;
     display: flex;
     justify-content: center;
     width: 80vw;
@@ -87,8 +152,7 @@ header {
 }
 
 svg.logo {
-    fill: var(--light-orange);/* 
-    stroke: var(--light-orange); */
+    fill: var(--light-orange);
 }
 
 
@@ -114,7 +178,7 @@ header aside.logo-navicon svg.navicon rect {
 /* navicon blir ett kryss */
 header.open svg.navicon .navicon__linje-1 {
     fill: white;
-    transform: translate(-15px, 15px) rotate(45deg);
+    transform: translate(-15px, -15px) rotate(45deg);
 } 
 header.open svg.navicon .navicon__linje-2 {
     fill: rgba(58, 58, 58, 0);
@@ -225,7 +289,7 @@ header.open nav.navbar-container {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 100px;
+    height: 6.25rem;
 }
 
    .hero__text {
@@ -249,13 +313,13 @@ header.open nav.navbar-container {
 
 main {
     width: 100vw;
-    max-width: 1000px;
+    max-width: 63rem;
     margin: 0 auto;
 }
 
 
 .infogrid-container {
-    margin: 20px auto;
+    margin: 1.25rem auto;
     display: grid;
     grid-template-areas: 
     "ruta-1-bild"
@@ -269,7 +333,7 @@ main {
     border-radius: 50px;
     background-color: var(--dark-gray);
     box-shadow: 0 2px 5px rgb(22, 22, 22);
-    padding-bottom: 50px;
+    padding-bottom: 3.1rem;
 }
 .hero, .infogrid-container__muaythai-bild, .infogrid-container__bjj-bild, .infogrid-container__kravmaga-bild, .infogrid-container__item1,
  .infogrid-container__item4,.infogrid-container__item6, .footer{
@@ -441,7 +505,7 @@ article.bild:first-child {
  .footer__grid-container {
      display: grid;
      grid-template-columns: repeat(1, 1fr);
-    transform: translateY(130px);
+    transform: translateY(8rem);
  }
 
 
@@ -499,9 +563,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
 
 .footer__grid-container__item a {
     text-decoration: none;
-    color: white;
+    color: white;/* 
+    text-shadow: var(--white-textoutline); */
     font-size: 1.7rem;
+    transition: all 1s ease;
 }
+
+    .footer__grid-container__item a:hover {
+    color: white;
+    transform: scale(1.2);  
+    text-shadow: none;
+} 
 
 
 .header .ytter-container {
@@ -540,13 +612,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
         top: 0;
         right: 0;
         width: 100vw;
-        background: #61616186;
+        background: rgba(137, 137, 137, 0.57);
         padding: 0.8rem 0;
         z-index: 9999;
     }
 
     .header .header__top {
-        height: 50px;
+        height: 3.1rem;
     display: flex;
     width: 80vw;
     margin: 0 auto;
@@ -609,29 +681,29 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
         stroke: var(--light-orange);
     }
 
+
     .navicon {
         height: 0;
         width: 0;
     }
     header nav.navbar-container {
         left: 0;
-        height: 50px;
+        height: 3.1rem;
         flex-direction: row;
         position: relative;
         background-color: #3a3a3a00;
         width: auto;
-        transform: translateX(-20px);
+        transform: translateX(-1.25rem);
     }
 
     nav.navbar-container ul.navbar-container__link-list-container {
-        height: 50px;
+        height: 3.1rem;
         flex-direction: row;
     }
     nav.navbar-container ul.navbar-container__link-list-container .nav-link {
         color: white;
         text-decoration: none;
-        font-size: .6rem;
-        letter-spacing: 0.2rem;
+        font-size: .7rem;
         transition: all .2s ease-in;
         padding: 0 0.2rem;
     } 
@@ -643,9 +715,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
         border-radius: 10px;
     }
 
-    .footer__grid-container__item a:hover .footer__grid-container__item  {
-        border:2px dotted blue;
-    }
 
     .navbar-container aside.navbar-container__color-schemes {
         margin: 0;
@@ -670,7 +739,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
     }
 
     .navbar-container aside.navbar-container__color-schemes .colorful-theme:hover {
-        border: .2rem solid var(--light-gray);
+        border: .2rem solid var(--dark-blue);
         background: rgba(242,164,128,1);
         background: -moz-radial-gradient(center, ellipse cover, rgba(242,164,128,1) 0%, rgba(242,164,128,1) 5%, rgba(240,113,50,1) 74%, rgba(240,113,50,1) 100%);
         background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(242,164,128,1)), color-stop(5%, rgba(242,164,128,1)), color-stop(74%, rgba(240,113,50,1)), color-stop(100%, rgba(240,113,50,1)));
@@ -681,7 +750,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2a480', endColorstr='#f07132', GradientType=1 );
     }
     .navbar-container aside.navbar-container__color-schemes .light-theme:hover {
-        border: .2rem solid var(--dark-blue);
+        border: .2rem solid var(--accent-green);
         background: rgba(189,185,189,1);
         background: -moz-radial-gradient(center, ellipse cover, rgba(189,185,189,1) 0%, rgba(189,185,189,1) 5%, rgba(137,137,137,1) 74%, rgba(137,137,137,1) 100%);
         background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(189,185,189,1)), color-stop(5%, rgba(189,185,189,1)), color-stop(74%, rgba(137,137,137,1)), color-stop(100%, rgba(137,137,137,1)));
@@ -721,12 +790,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
         background-repeat: no-repeat;
         transform:  scale(0.3);
         flex: 1;
-        height: 1500px;
+        height: 94rem;
         transform-origin: center top;
         transform-origin: 3cm 0cm;
         animation: box-säck 1s ease-in-out infinite alternate;
         z-index: 999;  
-        margin-top: 100px;
+        margin-top: 6.3rem;
     }
 
 @keyframes box-säck {
@@ -753,7 +822,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
     "ruta-5-text ruta-6-bild"
     ;
     width: 85vw;
-    max-width: 1000px;
+    max-width: 63rem;
     row-gap: 20vh;
     column-gap: 0;
     background-color: transparent;
@@ -776,8 +845,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
 
     .hero__text__knapp, .infogrid-container__item__knapp {
         content: url(/HTML-CSS-slutprojekt/IMG/pil-vit-genomskinlig.svg);
-        width: 50px;
-        height: 50px;
+        width: 3.1rem;
+        height: 3.1rem;
         padding: 1rem 1rem;
         border-radius: 100%;
         transition: all .5s ease-in;
@@ -789,7 +858,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
     }
 
     .hero__text__knapp:active, .infogrid-container__item__knapp:active {
-        transform:translateX(52px);
+        transform:translateX(3.25rem);
     }
 
 
@@ -801,7 +870,7 @@ article.bild, .muaythai-bild1, .muaythai-bild2, .muaythai-bild3, .bjj-bild1, .bj
     height: 30vw;
     width: auto;
     filter: grayscale(100);
-    min-height: 300px;
+    min-height: 18.75rem;
 }
 
 article.bild:first-child {
@@ -819,7 +888,7 @@ article.bild:first-child {
     justify-content: center;
     z-index: 999;
     height: 30vw;
-    min-height: 300px;
+    min-height: 18.75rem;
     transform: translateY(0vh) skewY(0deg);
     background-color: lightgrey;
     width: 100%;
@@ -842,7 +911,7 @@ article.bild:first-child {
        grid-template-columns: repeat(3, 1fr);
        margin: 0 auto;
        border-top: 2px solid var(--accent-green);
-       padding-top: 40px;
+       padding-top: 2.5rem;
    }
    
    
@@ -850,8 +919,8 @@ article.bild:first-child {
 .footer__grid-container__item {
     width: 25vw;
     height: 25vw;
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 18.75rem;
+    max-height: 18.75rem;
     margin: 1rem auto;
     padding: 0;
     line-height: 2rem;
@@ -864,13 +933,12 @@ article.bild:first-child {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 3.1rem;
 }
 
 .footer__grid-container__item a {
-    text-decoration: none;
-    color: white;
-    font-size: 2rem;
+    color: grey;
+    text-shadow: var(--white-textoutline);
 }
 
 }
@@ -879,7 +947,7 @@ article.bild:first-child {
 
 
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
 
     h1 {
         font-size: 5rem;
@@ -893,7 +961,7 @@ article.bild:first-child {
         justify-content: space-between;
     }
     .nav-link {
-        font-size: 1rem;
+        font-size: .6rem;
         padding: 0 .3rem;
         max-width: fit-content;
     }
