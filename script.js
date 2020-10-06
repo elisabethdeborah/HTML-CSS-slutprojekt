@@ -7,7 +7,7 @@ document.querySelector('.navicon')
 .addEventListener('click', function(params){
     document.querySelector('header').classList.toggle('open');
 });
-//close menu on click on listobject (nav-link)
+//stäng sidomenyn vid klick på länk
 
 document.querySelectorAll('ul > li')
 .forEach(link => {
@@ -20,7 +20,7 @@ document.querySelectorAll('ul > li')
 })
 
 
-//byt färgtema på sidan
+//byt färgtema på sidan, stäng meny om sidomeny
 theme.forEach(button => {
     button.addEventListener('click', (e)=>{
          document.querySelector('body').className=button.classList[1];

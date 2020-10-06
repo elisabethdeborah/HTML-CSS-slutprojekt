@@ -5,11 +5,10 @@
     --dark-orange: #BD5928;
     --dark-gray: #898989;
     --dark-gray-transparent: rgba(58, 58, 58, 0.95);
-    --light-gray: #dfdddd;
     --light-gray: #bebebe;
     --accent-green: #0E383A;
-    --white-textoutline: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
-    --black-textoutline: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    --white-textoutline: -1px -1px 0 #bebebe, 1px -1px 0 #bebebe, -1px 1px 0 #bebebe, 1px 1px 0 #bebebe;
+    --orange-textoutline: -1px -1px 0 #f07132e6, 1px -1px 0 #f07132e6, -1px 1px 0 #f07132e6, 1px 1px 0 #f07132e6;
 }
 
 body {
@@ -31,13 +30,14 @@ body {
     margin: 0 auto;
 }
 
-h1 {
+.hero__text__h1 {
     font-size: 4rem;
     line-height: 6rem;
     display: inline-block;
     text-align: center;
     text-shadow: var(--white-textoutline);
     margin: 0 auto;
+    transition: all 1s ease;
 }
 
 
@@ -77,6 +77,14 @@ body.dark-theme header .ytter-container {
 body.dark-theme svg.logo:hover path.logo__del1, body.dark-theme svg.logo:hover path.logo__del2, body.dark-theme svg.logo:hover path.logo__del3, body.dark-theme svg.logo:hover path.logo__del4 {
     fill: var(--light-orange);
     stroke: var(--light-orange);
+}
+
+body.dark-theme nav.navbar-container ul.navbar-container__link-list-container .nav-link:hover{
+    color: white;
+    padding: 0.5rem;
+    border: 2px dashed var(--light-orange);
+    border-radius: 10px;
+    font-weight: 800;
 }
 
 body.dark-theme .hero__text__h1, body.dark-theme .hero__text__ingress {
@@ -121,10 +129,20 @@ body.colorful-theme rect.navicon__linje-1, body.colorful-theme rect.navicon__lin
     fill: var(--accent-green);
 }
 body.colorful-theme nav.navbar-container ul.navbar-container__link-list-container .nav-link:hover{
-    color: yellow;
+    color: white;
     padding: 0.5rem;
-    border: 1px dashed var(--light-gray);
+    border: 2px dashed white;
     border-radius: 10px;
+    font-weight: 800;
+}
+
+body.colorful-theme .hero .bjj-rubrik {
+    color: var(--light-gray);
+}
+
+
+body.colorful-theme .hero__text__h1 {
+    text-shadow: var(--orange-textoutline);
 }
 
 body.colorful-theme .footer__grid-container__item:first-child {
@@ -291,10 +309,17 @@ header.open nav.navbar-container {
    .start-rubrik {
     color: var(--accent-green);
     word-break: break-all;
+    width: 60%;
+    z-index: 999;
+   }
+
+   .muaythai-rubrik, .bjj-rubrik, .kravmaga-rubrik {
+       margin-bottom: 5vh;
    }
 
    .hero__text__ingress {
     color: var(--accent-green);
+    z-index: 999;
    }
 
    .hero__bild__stil {
@@ -305,13 +330,22 @@ header.open nav.navbar-container {
     align-items: center;
 }
 
+    .hero__bild__handskar {
+        background-image: url(/HTML-CSS-slutprojekt/IMG/boxhandskar.jpg);
+        background-position: 100%;
+        background-size: cover;
+        filter: grayscale(100) opacity(.5);
+        z-index: 1;
+        transform: translateY(70px);
+    }
+
    .hero__bild__thai {
     background-image: url(/HTML-CSS-slutprojekt/IMG/muaythai-fight.jpg);
     background-position: 67% 20%;
    }
  
    .hero-bjj {
-    background-image: url(/HTML-CSS-slutprojekt/IMG/bjj.jpg);
+    background-image: url(/HTML-CSS-slutprojekt/IMG/bjj-women.jpg);
     background-position: 42% 30%;
    }
 
@@ -331,8 +365,8 @@ header.open nav.navbar-container {
        display: flex;
        flex-direction: column;
        align-items: center;
-       justify-content: center;
-       padding-top: 10vh;
+       justify-content: space-around;
+        /* padding-top: 10vh; */
    }
 
    .hero__text__ingress {
@@ -383,6 +417,10 @@ main {
 
 .infogrid-container__muaythai{
     grid-area: ruta-2-text;
+}
+
+.infogrid-container__item3 .muaythai-rubrik {
+    padding-top: 60px;
 }
 
 .infogrid-container__bjj {
@@ -475,6 +513,7 @@ article.bild:first-child {
 }
 .bjj-bild2 {
     background-image: url(/HTML-CSS-slutprojekt/IMG/bjj-standing2.jpg);
+    background-position: 50% 65%;
 }
 .bjj-bild3 {
     background-image: url(/HTML-CSS-slutprojekt/IMG/bjj-train.jpg);
@@ -494,8 +533,17 @@ article.bild:first-child {
 .bjj-bild1, .krav-bild1 {
     background-position: 80% 50%;  
 }
-.hero-start, .muaythai-bild2, .bjj-bild2, .bjj-bild3 {
+
+.hero-start {
+    height: 90vh;
+}
+
+/* .hero-start, */ .muaythai-bild2, .bjj-bild3 {
     background-position: 50% 50%;
+}
+
+main {
+    margin-top: 10vh;
 }
 
 .infogrid-container__item__knapp, .hero__text__knapp {
@@ -644,11 +692,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
     }
 
     h1 {
-        text-shadow: none;
+        /* text-shadow: none; */
         font-size: 5rem;
         display: inline-block;
     }
 
+    .hero__text__h1 {
+        width: auto;
+    }
     .header .ytter-container {
         position: fixed;
         left: 0;
@@ -831,6 +882,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
             padding: 0;
         }
 
+    .hero__text {
+        padding-top: 10vh;
+    }
+
     .hero__bild__stil {
         height: 400px;
         width: 400px;
@@ -851,6 +906,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
         border-radius: 0;
     }
 
+    /* .hero-start aside.hero__bild {
+        height: 0;
+        width: 0;
+    } */
+    .hero__bild__handskar {
+        width: 0;
+        height: 0;
+    }
+
 @keyframes box-säck {
     0% {
         transform: rotate(6deg) scale(0.3);
@@ -868,6 +932,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04264a', end
         transform: rotate(-6deg) scale(0.3);
     }
 }
+
+
+.main-start {
+    margin-top: -20vh;
+}
+
+
 .infogrid-container {
     grid-template-areas: 
     "ruta-2-text ruta-1-bild"
@@ -904,7 +975,7 @@ article.bild:first-child {
 }
 
 .hero__text__start {
-    transform: translateY(60vw);
+    transform: translateY(40vw);
 }
 
 
@@ -958,6 +1029,11 @@ article.bild, .muaythai-bild1, .muaythai-bild2, .muaythai-bild3, .bjj-bild1, .bj
     transform: skewY(0deg);
     margin: 0;
 }
+
+.infogrid-container__item3 .muaythai-rubrik {
+    padding-top: 0;
+}
+
 .infogrid-container > article.text p {
     width: 80%;
 }
@@ -1038,7 +1114,7 @@ article.bild, .muaythai-bild1, .muaythai-bild2, .muaythai-bild3, .bjj-bild1, .bj
         flex-direction: row;
     }
     nav.navbar-container ul.navbar-container__link-list-container .nav-link {
-        color: white;
+        color: rgb(223, 222, 222);
         text-decoration: none;
         font-size: .7rem;
         transition: all .2s ease-in;
@@ -1046,9 +1122,10 @@ article.bild, .muaythai-bild1, .muaythai-bild2, .muaythai-bild3, .bjj-bild1, .bj
     } 
 
     nav.navbar-container ul.navbar-container__link-list-container .nav-link:hover{
-        color: var(--light-orange);
+       color: white;
+       font-weight: 800;
         padding: 0.5rem;
-        border: 1px dashed var(--dark-blue);
+        border: 2px dashed var(--dark-blue);
         border-radius: 10px;
     }
 
@@ -1198,6 +1275,6 @@ article.bild, .muaythai-bild1, .muaythai-bild2, .muaythai-bild3, .bjj-bild1, .bj
     }
 
     .infogrid-container > article.text, .infogrid-container > article.bild, .muaythai-bild1, .muaythai-bild2, .muaythai-bild3, .bjj-bild1, .bjj-bild2, .bjj-bild3, .krav-bild1, .krav-bild2, .krav-bild3 {
-        height: 50vh;
+        height: 55vh;
     }
 }
