@@ -16,7 +16,7 @@ body {
     box-sizing: border-box; 
     scroll-behavior: smooth;
     color: white;
-    background: var(--light-gray) url(/HTML-CSS-slutprojekt/IMG/background-vector-transparent2.svg);
+    background: var(--light-gray) url(/ElisabethRumar-projektarbete2/IMG/background-vector-transparent2.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
@@ -118,7 +118,7 @@ svg{
 /* DARK THEME */
 body.body--dark-theme {
     background-color: var(--light-blue);
-     background-image: url(/HTML-CSS-slutprojekt/IMG/background-vector-blue.svg); 
+     background-image: url(/ElisabethRumar-projektarbete2/IMG/background-vector-blue.svg); 
      background-repeat: no-repeat;    
 }
 
@@ -162,7 +162,7 @@ body.body--dark-theme .footer__grid-container__item:nth-child(3) {
 /* COLORFUL THEME */
 body.body--colorful-theme {
     background-color: var(--light-orange);
-     background-image: url(/HTML-CSS-slutprojekt/IMG/background-vector-orange.svg); 
+     background-image: url(/ElisabethRumar-projektarbete2/IMG/background-vector-orange.svg);  
      background-repeat: no-repeat;
 }
 body.body--colorful-theme header .ytter-container {
@@ -395,7 +395,7 @@ nav.navbar-container .nav-link:hover, body.body--light-theme nav.navbar-containe
 }
 
 .hero__bild__handskar {
-    background-image: url(/HTML-CSS-slutprojekt/IMG/boxhandskar.jpg);
+    background-image: url(/ElisabethRumar-projektarbete2/IMG/boxhandskar.jpg); 
     background-position: 100%;
     background-size: cover;
     filter: grayscale(100) opacity(.6);
@@ -404,17 +404,17 @@ nav.navbar-container .nav-link:hover, body.body--light-theme nav.navbar-containe
 }
 
 .hero__bild__thai {
-    background-image: url(/HTML-CSS-slutprojekt/IMG/muaythai-fight.jpg);
+    background-image: url(/ElisabethRumar-projektarbete2/IMG/muaythai-fight.jpg); 
     background-position: 67% 20%;
 }
  
 .hero-bjj {
-    background-image: url(/HTML-CSS-slutprojekt/IMG/bjj-women.jpg);
+    background-image: url(/ElisabethRumar-projektarbete2/IMG/bjj-women.jpg); 
     background-position: 42% 30%;
 }
 
 .hero-kravmaga {
-    background-image: url(/HTML-CSS-slutprojekt/IMG/kravmaga-eyepoke.jpg);
+    background-image: url(/ElisabethRumar-projektarbete2/IMG/kravmaga-eyepoke.jpg); 
     background-position: 65% 10%;
 }
 
@@ -472,7 +472,7 @@ main {
 
 .infogrid-container__muaythai-bild {
     grid-area: ruta-1-bild;
-    background-image: url(/HTML-CSS-slutprojekt/IMG/muaythai-fight.jpg);
+    background-image: url(/ElisabethRumar-projektarbete2/IMG/muaythai-fight.jpg); 
     background-position: 67% 20%;
 }
 
@@ -486,7 +486,7 @@ main {
 
 .infogrid-container__bjj-bild {
     grid-area: ruta-4-bild;
-    background-image: url(/HTML-CSS-slutprojekt/IMG/bjj-women.jpg);
+    background-image: url(/ElisabethRumar-projektarbete2/IMG/bjj-women.jpg); 
     background-position: 42% 30%;
 }
 
@@ -496,7 +496,7 @@ main {
 
 .infogrid-container__kravmaga-bild {
     grid-area: ruta-6-bild;
-    background-image: url(/HTML-CSS-slutprojekt/IMG/kravmaga-eyepoke.jpg);
+    background-image: url(/ElisabethRumar-projektarbete2/IMG/kravmaga-eyepoke.jpg); 
     background-position: 65% 10%;
 }
 
@@ -547,43 +547,43 @@ article.bild, .muaythai-bild1, .muaythai-bild2, .muaythai-bild3, .bjj-bild1, .bj
 }
 
 .muaythai-bild1 {
-    background-image: url(/HTML-CSS-slutprojekt/IMG/kick-training.jpg);
+    background-image: url(/ElisabethRumar-projektarbete2/IMG/kick-training.jpg); 
     background-position: 60% 50%;
 }
 
 .muaythai-bild2 {
-    background-image: url(/HTML-CSS-slutprojekt/IMG/muaythai-fight.jpg);
+    background-image: url(/ElisabethRumar-projektarbete2/IMG/muaythai-fight.jpg); 
 }
 
 .muaythai-bild3 {
-    background-image: url(/HTML-CSS-slutprojekt/IMG/thai-training.jpg);
+    background-image: url(/ElisabethRumar-projektarbete2/IMG/thai-training.jpg); 
     background-position: 35% 50%;
 }
 
 .bjj-bild1 {
-    background-image: url(/HTML-CSS-slutprojekt/IMG/bjj-boys.jpg);
+    background-image: url(/ElisabethRumar-projektarbete2/IMG/bjj-boys.jpg); 
 }
 
 .bjj-bild2 {
-    background-image: url(/HTML-CSS-slutprojekt/IMG/bjj-standing2.jpg);
+    background-image: url(/ElisabethRumar-projektarbete2/IMG/bjj-standing2.jpg); 
     background-position: 50% 65%;
 }
 
 .bjj-bild3 {
-    background-image: url(/HTML-CSS-slutprojekt/IMG/bjj-train.jpg);
+    background-image: url(/ElisabethRumar-projektarbete2/IMG/bjj-train.jpg); 
 }
 
-.krav-bild1 {
-    background-image: url(/HTML-CSS-slutprojekt/IMG/kravmaga-choke.jpg);  
+.krav-bild1 {  
+    background-image: url(/ElisabethRumar-projektarbete2/IMG/kravmaga-choke.jpg); 
 }
 
 .krav-bild2 {
-    background-image: url(/HTML-CSS-slutprojekt/IMG/kravmaga-knee.jpg);
+    background-image: url(/ElisabethRumar-projektarbete2/IMG/kravmaga-knee.jpg); 
     background-position: 55% 50%; 
 }
 
 .krav-bild3 {
-    background-image: url(/HTML-CSS-slutprojekt/IMG/kravmaga-knife.jpg);
+    background-image: url(/ElisabethRumar-projektarbete2/IMG/kravmaga-knife.jpg); 
     background-position: 65% 50%;
 }
 
@@ -856,7 +856,7 @@ article.bild, .muaythai-bild1, .muaythai-bild2, .muaythai-bild3, .bjj-bild1, .bj
     }
 
     .hero__text__knapp, .infogrid-container__item__knapp {
-        content: url(/HTML-CSS-slutprojekt/IMG/pil-vit-genomskinlig.svg);
+        content: url(/ElisabethRumar-projektarbete2/IMG/pil-vit-genomskinlig.svg);
         width: 3.1rem;
         height: 3.1rem;
         padding: 1rem 1rem;
@@ -1025,7 +1025,7 @@ article.bild, .muaythai-bild1, .muaythai-bild2, .muaythai-bild3, .bjj-bild1, .bj
     }
     
     .hero__bild__start {
-        background:  url(/HTML-CSS-slutprojekt/IMG/punching-bag.png); /* PNG-format för att ha genomskinliga områden i fotot */
+        background:  url(/ElisabethRumar-projektarbete2/IMG/punching-bag.png); /* PNG-format för att ha genomskinliga områden i fotot */
         background-repeat: no-repeat;
         transform:  scale(0.3);
         height: 94rem;
@@ -1059,15 +1059,15 @@ article.bild, .muaythai-bild1, .muaythai-bild2, .muaythai-bild3, .bjj-bild1, .bj
     }
 
     body, body.body--light-theme {
-        background: var(--light-gray) url(/HTML-CSS-slutprojekt/IMG/background-vector-större.svg);
+        background: var(--light-gray) url(/ElisabethRumar-projektarbete2/IMG/background-vector-större.svg);
     }
 
     body.body--dark-theme {
-        background: var(--light-blue) url(/HTML-CSS-slutprojekt/IMG/background-vector-större-blue.svg);
+        background: var(--light-blue) url(/ElisabethRumar-projektarbete2/IMG/background-vector-större-blue.svg);
     }
 
     body.body--colorful-theme {
-        background: var(--light-orange) url(/HTML-CSS-slutprojekt/IMG/background-vector-större-orange.svg);
+        background: var(--light-orange) url(/ElisabethRumar-projektarbete2/IMG/background-vector-större-orange.svg);
     }
 
     body, body.body--light-theme, body.body--dark-theme, body.body--colorful-theme {
